@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "bf1ba9c3-5e61-47b9-a662-8b21355c8c18",
+		"name": "SecureMicroservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Movies.API",
+			"item": [
+				{
+					"name": "GET Movies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkIzQ0ZCMkE5Qjg2QzBDQjJDMDRDQjc2N0U0RUUyMUQ2IiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE1OTg2MjAxMTUsImV4cCI6MTU5ODYyMzcxNSwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwNSIsImNsaWVudF9pZCI6Im1vdmllQ2xpZW50IiwianRpIjoiRDc4MUUwQkI0RjI3MzdBQzVDOTc5QTg2MjFBREU0NEMiLCJpYXQiOjE1OTg2MjAxMTUsInNjb3BlIjpbIm1vdmllQVBJIl19.Xjlpp18J6t7jPTEo111Yzvp98K4acgUzKifbgK6GQG0D5YHmW5hqn9VTUBRbyruhe6PVcqOJBXHSLyW_hoUMSljHhugilVr94m8ASbebwnnNdu-1Xynf9UZy8rzy3XeVB1_EiCp5HefoYxHEuLT_ThhnkqKEvI-UbhSa9-LEuXvyIDs7Yg0GtOeyh271ON0rWBAb1zNwo0kafEGFaW4R3XCVKgbPwFNwOPzEVWqM6X3sgWUo5kgbIbDca8Rf9p4-HSBrtgVRtlYmfrJHluF6YLnrdEdTWaCb2pC03V7X_RBxMky13zXqMYwG2vCD4ErNuJbHpkMHjf0j7Ktdplh3YQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/movies",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Movies From API GATEWAY",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkIzQ0ZCMkE5Qjg2QzBDQjJDMDRDQjc2N0U0RUUyMUQ2IiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE1OTg2MjAxMTUsImV4cCI6MTU5ODYyMzcxNSwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwNSIsImNsaWVudF9pZCI6Im1vdmllQ2xpZW50IiwianRpIjoiRDc4MUUwQkI0RjI3MzdBQzVDOTc5QTg2MjFBREU0NEMiLCJpYXQiOjE1OTg2MjAxMTUsInNjb3BlIjpbIm1vdmllQVBJIl19.Xjlpp18J6t7jPTEo111Yzvp98K4acgUzKifbgK6GQG0D5YHmW5hqn9VTUBRbyruhe6PVcqOJBXHSLyW_hoUMSljHhugilVr94m8ASbebwnnNdu-1Xynf9UZy8rzy3XeVB1_EiCp5HefoYxHEuLT_ThhnkqKEvI-UbhSa9-LEuXvyIDs7Yg0GtOeyh271ON0rWBAb1zNwo0kafEGFaW4R3XCVKgbPwFNwOPzEVWqM6X3sgWUo5kgbIbDca8Rf9p4-HSBrtgVRtlYmfrJHluF6YLnrdEdTWaCb2pC03V7X_RBxMky13zXqMYwG2vCD4ErNuJbHpkMHjf0j7Ktdplh3YQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5010/movies",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5010",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkIzQ0ZCMkE5Qjg2QzBDQjJDMDRDQjc2N0U0RUUyMUQ2IiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE1OTg2MjAxMTUsImV4cCI6MTU5ODYyMzcxNSwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwNSIsImNsaWVudF9pZCI6Im1vdmllQ2xpZW50IiwianRpIjoiRDc4MUUwQkI0RjI3MzdBQzVDOTc5QTg2MjFBREU0NEMiLCJpYXQiOjE1OTg2MjAxMTUsInNjb3BlIjpbIm1vdmllQVBJIl19.Xjlpp18J6t7jPTEo111Yzvp98K4acgUzKifbgK6GQG0D5YHmW5hqn9VTUBRbyruhe6PVcqOJBXHSLyW_hoUMSljHhugilVr94m8ASbebwnnNdu-1Xynf9UZy8rzy3XeVB1_EiCp5HefoYxHEuLT_ThhnkqKEvI-UbhSa9-LEuXvyIDs7Yg0GtOeyh271ON0rWBAb1zNwo0kafEGFaW4R3XCVKgbPwFNwOPzEVWqM6X3sgWUo5kgbIbDca8Rf9p4-HSBrtgVRtlYmfrJHluF6YLnrdEdTWaCb2pC03V7X_RBxMky13zXqMYwG2vCD4ErNuJbHpkMHjf0j7Ktdplh3YQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t        \"id\": 9,\r\n\t        \"title\": \"asd2\",\r\n\t        \"genre\": \"Comics\",\r\n\t        \"rating\": \"9.2\",\r\n\t        \"releaseDate\": \"2020-08-27T16:17:24.4346957+03:00\",\r\n\t        \"imageUrl\": \"images/src\",\r\n\t        \"owner\": \"swn\"\r\n    \t}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/movies",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Movies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkIzQ0ZCMkE5Qjg2QzBDQjJDMDRDQjc2N0U0RUUyMUQ2IiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE1OTg2MjA0NDIsImV4cCI6MTU5ODYyNDA0MiwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwNSIsImNsaWVudF9pZCI6Im1vdmllQ2xpZW50IiwianRpIjoiNDQ1MkRGRjc4M0IyMEFCNDczOTkwNjVCNkYyREI0MzgiLCJpYXQiOjE1OTg2MjA0NDIsInNjb3BlIjpbIm1vdmllQVBJIl19.dseVPLoTKXCg8sp30uCx_exWzLqruImoaI6YyCmqVf6E0Uby0PbFIkh5WlqpNu4EHWJBNeUSCgGo31Mk5MQQaLpjoUQRIO9CchdQpqANXC5I7Acuxtblb1SZxVKPjU58m6ItrcJkreLwt-msEDLsWSDk3whcg5v6Ucdf0H1Efu9jsEK18dIXay31vzZrdsg_lQh9INplwya204-RRQ43IYhNA4xfDK-a5xChQcwWHxJvCOTvAmJ9OaTyFEqdUufwbtJhk2N3DcBmvqIjmoPDURsvMM4v_fCrmaXdg3dXYOneLX1W-EVlLRerdLp_wNCkaT5tvYnoLFaiqfKPv4CUSA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\r\n\t        \"id\": 1,\r\n\t        \"title\": \"asd22\",\r\n\t        \"genre\": \"Comics\",\r\n\t        \"rating\": \"9.2\",\r\n\t        \"releaseDate\": \"2020-08-27T16:17:24.4346957+03:00\",\r\n\t        \"imageUrl\": \"images/src\",\r\n\t        \"owner\": \"swn\"\r\n    \t}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/movies/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Movies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkIzQ0ZCMkE5Qjg2QzBDQjJDMDRDQjc2N0U0RUUyMUQ2IiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE1OTg2MjA0NDIsImV4cCI6MTU5ODYyNDA0MiwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwNSIsImNsaWVudF9pZCI6Im1vdmllQ2xpZW50IiwianRpIjoiNDQ1MkRGRjc4M0IyMEFCNDczOTkwNjVCNkYyREI0MzgiLCJpYXQiOjE1OTg2MjA0NDIsInNjb3BlIjpbIm1vdmllQVBJIl19.dseVPLoTKXCg8sp30uCx_exWzLqruImoaI6YyCmqVf6E0Uby0PbFIkh5WlqpNu4EHWJBNeUSCgGo31Mk5MQQaLpjoUQRIO9CchdQpqANXC5I7Acuxtblb1SZxVKPjU58m6ItrcJkreLwt-msEDLsWSDk3whcg5v6Ucdf0H1Efu9jsEK18dIXay31vzZrdsg_lQh9INplwya204-RRQ43IYhNA4xfDK-a5xChQcwWHxJvCOTvAmJ9OaTyFEqdUufwbtJhk2N3DcBmvqIjmoPDURsvMM4v_fCrmaXdg3dXYOneLX1W-EVlLRerdLp_wNCkaT5tvYnoLFaiqfKPv4CUSA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/movies/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Identity Claims",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkIzQ0ZCMkE5Qjg2QzBDQjJDMDRDQjc2N0U0RUUyMUQ2IiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE1OTkxMzIxNzQsImV4cCI6MTU5OTEzNTc3NCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwNSIsImNsaWVudF9pZCI6Im1vdmllQ2xpZW50IiwianRpIjoiRjhEQkIwRTk5QTQwNEE5NzA3NzFENzg3QTAwRTRGM0QiLCJpYXQiOjE1OTkxMzIxNzQsInNjb3BlIjpbIm1vdmllQVBJIl19.ZitOAT3F34R79ZlMHsM2pvHmS8zxyEb0mdtIx3P2gHQVJ6HamGSjX4F478_3gXeHJ0BChL8XHsQsHFam4wfKHn9TgTy9oQW_UBfBfdS2dzrnLscBnL-pRFwj5RT6ZI6pECfBmZygivcSeU9HVnQFiaiwv6Z3aXGVKwh0_kU0LPuVCCmvSimZ4khqTQNxQCK9Fhm9Hz0LgrDR2zHNkHbjLhtAWv829J9wvbEM2wR6ySsRGGLO3vFzZfEWAQyK6iVYyh4vsV0J3nLzfhf5mhATF5sLoM0CY7b5uF-Q3dtLz0RbPoNEBK8Yh7NDMft78cYdQrhvfrif8GLldbEXOhv_kg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/identity",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"identity"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "IdentityServer",
+			"item": [
+				{
+					"name": "GET Discovery Document",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5005/.well-known/openid-configuration",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								".well-known",
+								"openid-configuration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "movieAPI",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "movieClient",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "secret",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:5005/connect/token",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"connect",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
