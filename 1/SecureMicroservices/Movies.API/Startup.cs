@@ -7,6 +7,7 @@ using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Movies.API.Data;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.IdentityModel.Logging;
 
 namespace Movies.API
 {
@@ -22,7 +23,7 @@ namespace Movies.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -32,10 +33,18 @@ namespace Movies.API
             services.AddDbContext<MoviesAPIContext>(options =>
                     options.UseInMemoryDatabase("Movies"));
 
+            //Use for debugging
+            IdentityModelEventSource.ShowPII = true;
             services.AddAuthentication("Bearer")
                 .AddJwtBearer("Bearer", options =>
                 {
+                    //Identity Server 4
                     options.Authority = "https://localhost:5005";
+
+                    //WSO2 Identity Server
+                    //options.Authority = "https://localhost:9443/oauth2/oidcdiscovery";
+                   
+                    
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateAudience = false
