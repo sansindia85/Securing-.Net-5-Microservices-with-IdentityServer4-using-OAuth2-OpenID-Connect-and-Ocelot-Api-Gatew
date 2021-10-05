@@ -33,10 +33,25 @@ namespace Movies.Client
             .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme)
             .AddOpenIdConnect(OpenIdConnectDefaults.AuthenticationScheme, options =>
             {
-                options.Authority = "Https://localhost:5005";
+                //Identity Server 4
+                //options.Authority = "https://localhost:5005";
 
-                options.ClientId = "movies_mvc_client";
-                options.ClientSecret = "secret";
+                //WSO2 Identity Server
+                options.Authority = "https://localhost:9443/oauth2/oidcdiscovery";
+
+                //Identity Server 4
+                //options.ClientId = "movies_mvc_client";
+
+                //WSO2 Identity Server
+                options.ClientId = "5KA8TvfyOVqHB27K2zwE6xDQtooa";
+
+                //Identity Server 4
+                //options.ClientSecret = "secret";
+
+                //WSO2 Identity Server
+                options.ClientSecret = "_twKPi07G39o9tMf6QBklkM0_HMa";
+
+
                 options.ResponseType = "code";
 
                 options.Scope.Add("openid");
