@@ -40,10 +40,10 @@ namespace Movies.API
                 .AddJwtBearer("Bearer", options =>
                 {
                     //Identity Server 4
-                    options.Authority = "https://localhost:5005";
+                    //options.Authority = "https://localhost:5005";
 
                     //WSO2 Identity Server
-                    //options.Authority = "https://localhost:9443/oauth2/oidcdiscovery";
+                    options.Authority = "https://localhost:9443/oauth2/oidcdiscovery";
                    
                     
                     options.TokenValidationParameters = new TokenValidationParameters
@@ -54,8 +54,13 @@ namespace Movies.API
 
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("ClientIdPolicy", 
-                    policy => policy.RequireClaim("client_id", "movieClient"));
+                //Identity Server 4
+                //options.AddPolicy("ClientIdPolicy", 
+                //    policy => policy.RequireClaim("client_id", "movieClient"));
+
+                //WSO2 Identity Server
+                options.AddPolicy("ClientIdPolicy",
+                    policy => policy.RequireClaim("aud", "UEdQFjjlGRvKakTSfhBjLDMcdeMa"));
 
             });
         }
