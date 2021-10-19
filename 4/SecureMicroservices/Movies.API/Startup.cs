@@ -54,13 +54,8 @@ namespace Movies.API
 
             services.AddAuthorization(options =>
             {
-                //Identity Server 4
                 options.AddPolicy("ClientIdPolicy", 
                     policy => policy.RequireClaim("client_id", "movieClient"));
-
-                //WSO2 Identity Server
-                //options.AddPolicy("ClientIdPolicy",
-                //    policy => policy.RequireClaim("aud", "UEdQFjjlGRvKakTSfhBjLDMcdeMa"));
 
             });
         }

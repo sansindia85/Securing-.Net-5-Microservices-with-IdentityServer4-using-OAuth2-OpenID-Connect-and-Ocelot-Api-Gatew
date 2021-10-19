@@ -5,3 +5,5 @@ STEP 1 : Movies.API with JWT Bearer Token Authentication
 STEP 2 : Claim Based Authentication with client_id Claim Restriction
 
 STEP 3 : Movies client with code flow
+
+STEP 4 : Movies client talking to Movies API.
